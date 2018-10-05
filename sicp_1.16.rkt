@@ -4,7 +4,7 @@
 
 (define (exp-iter b n a)
    (cond ((= n 0) 1)
-         ((isevn n) (exp-iter (square b) (/ n 2) a))
+         ((iseven n) (exp-iter (square b) (/ n 2) a))
          (else (* b (exp-iter b (- n 1) a)))))
 
 (define (fast-exp b n) (exp-iter b n 1))
