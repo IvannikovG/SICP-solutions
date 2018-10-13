@@ -7,7 +7,7 @@
 
 (define (fast-expt number counter product)
   (cond ((= counter 0) 1)
-        ((even?n counter) (square (fast-expt number (/ counter 2) product)))
+        ((even?n counter) (square (fast-expt number (/ counter 2) (* number product))))
         (else (* number (fast-expt number (- counter 1) (* number product))))))
 
 (fastest 2 10)
