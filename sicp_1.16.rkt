@@ -1,11 +1,13 @@
 (define (square x) (* x x))
+(define (even?n n)
+  (= (remainder n 2) 0))
 
-(define (iseven x ) (= remainder n 2) 0))
+(define (fastest number counter)
+  (fast-expt number counter 1))
 
-(define (exp-iter b n a)
-   (cond ((= n 0) 1)
-         ((iseven n) (exp-iter (square b) (/ n 2) a))
-         (else (* b (exp-iter b (- n 1) a)))))
+(define (fast-expt number counter product)
+  (cond ((= counter 0) 1)
+        ((even?n counter) (square (fast-expt number (/ counter 2) product)))
+        (else (* number (fast-expt number (- counter 1) (* number product))))))
 
-(define (fast-exp b n) (exp-iter b n 1))
-
+(fastest 2 10)
