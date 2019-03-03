@@ -1,2 +1,2 @@
-# SICP-chapter-1
-Chapter 1
+# SICP-solutions
+starting from 0.5 of the 1st chapter
