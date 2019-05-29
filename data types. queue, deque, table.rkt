@@ -244,7 +244,7 @@ ta
                  (if record
                      (mcdr record)
                      false)))
-              (else (let ((subtable (assoc (mcdr keys) (mcdr table))))
+              (else (let ((subtable (assoc (mcdr keys) (mcdr table)))) ;;??
                       (if subtable
                           (iter (mcdr keys) subtable)
                           (iter (mcdr keys) table))))))
